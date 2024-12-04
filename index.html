@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIH Mobile</title>
+    <link rel="shortcut icon" href="https://www.habbo.com.br/habbo-imaging/badge/b09014s43131s50134s17013s170151e0a30a5a81c1fcb98d10054d03bc593.gif" type="image/gif">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom,#b87400, #000);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 10px;
+        }
+        ::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-dedo {
+    background: linear-gradient(to bottom, #b87400, #000);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #000, #b87400);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: linear-gradient(to bottom, #b87400, #000);
+}
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .container {
+            font-family: 'Poppins', sans-serif;
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        position: relative;
+        transition: transform 0.5s ease-in-out;
+      }
+
+        .container h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            margin: 0 0 15px;
+            font-weight: bold;
+        }
+
+        .dropdown {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .dropdown select option {
+    padding: 10px;
+    background-color: #f8f8ff;
+    color: #000;
+}
+
+.dropdown select option:hover {
+    background-color: #b87400;
+    color: #fff;
+}
+
+        .dropdown select {
+            font-family: 'Poppins', sans-serif;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid #000;
+            width: 100%;
+        }
+
+
+        #texto {
+            font-family: 'Poppins', sans-serif;
+            padding: 15px;
+            background-color: #f8f8ff;
+            border: 2px solid #000;
+            border-radius: 8px;
+            font-size: 14px;
+            text-align: left;
+            color: #333;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .copy-btn {
+            font-family: 'Poppins', sans-serif;
+            background-color: #b87400;
+            color: white;
+            border: 2px solid #000;
+            padding: 3px 6px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 9px;
+            margin-left: 10px;
+        }
+
+        .copy-btn:focus {
+            outline: none;
+        }
+
+        .copy-btn:active {
+            background-color: #8f5800;
+        }
+
+        .descricao {
+            font-family: 'Poppins', sans-serif;
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        .titulo {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 20px;
+            }
+
+            .container h2 {
+                font-size: 16px;
+            }
+
+            .dropdown select {
+                font-size: 14px;
+            }
+
+            #texto {
+                font-size: 14px;
+            }
+
+            .copy-btn {
+                font-size: 12px;
+                padding: 6px 10px;
+            }
+        }
+
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #b87400, #000);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #b87400, #000);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 10px;
+        }
+
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            z-index: 9999;
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .spinner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fas.fa-spinner {
+            font-size: 50px;
+            color: #ffac00;
+            animation: rotateSpin 1s infinite linear;
+        }
+
+        @keyframes rotateSpin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #loading-text {
+            margin-left: 15px;
+            font-size: 30px;
+            display: inline-block;
+            font-weight: bold;
+        }
+
+        #creditos {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    #creditos p {
+        margin: 5px 0;
+    }
+
+    #creditos a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    @media (max-width: 1024px) and (orientation: landscape) {
+    body {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    .dropdown select {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    #texto {
+        font-size: 16px;
+    }
+
+    .copy-btn {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    header img {
+        max-width: 120px;
+    }
+
+    .loading {
+        font-size: 20px;
+    }
+
+    .spinner .fas.fa-spinner {
+        font-size: 45px;
+    }
+
+    #loading-text {
+        font-size: 26px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div id="loading" class="loading">
+        <div class="spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <span id="loading-text">Carregando.</span>
+        </div>
+    </div>
+    <header>
+        <img src="https://www.habbo.com.br/habbo-imaging/badge/b09014s43131s50134s17013s170151e0a30a5a81c1fcb98d10054d03bc593.gif" alt="Logo">
+        <h1> <i class="fas fa-chalkboard-teacher"></i> Programa de Incentivo à História</h1>
+    </header>
+
+    <div class="container">
+        <div class="dropdown">
+            <select id="seletor">
+                <option value="CURSO" style="text-align: center;">Selecione o script de PIH e boa aplicação!</option>
+                <option value="PIH" style="text-align: center;">Programa de Incentivo à História</option>
+            </select>
+        </div>
+        <div id="texto"></div>
+    </div>
+
+    <footer id="creditos">
+        <p>Desenvolvido por <strong>,youiz</strong></p>
+        <p>Idealizado por <strong>ofranco6830</strong> & <strong>joaobruxao</strong></p>
+        <p>&copy; Reservam-se os direitos à Polícia Militar Revolução Contra o Crime</p>
+    </footer>
+
+    <script>
+        const scripts = {
+            PIH: [
+                    { tipo: 'titulo', texto: "INTRODUÇÃO"},
+                    { tipo: 'texto', texto: "Bem-vindo ao Programa de Incentivo à História!" },
+                    { tipo: 'descricao', texto: "-> testando descrição<br>" },
+                    { tipo: 'titulo', texto: "TESTE TÍTULO" },
+                    { tipo: 'descricao', texto: "um programa do garoto" }
+                ]
+        };
+
+        const seletor = document.getElementById("seletor");
+        const textoDiv = document.getElementById("texto");
+
+        seletor.addEventListener("change", () => {
+            const opcaoSelecionada = seletor.value;
+            if (scripts[opcaoSelecionada]) {
+                const texto = scripts[opcaoSelecionada].map(item => {
+                    if (item.tipo === 'titulo') {
+                        return `
+                            <div class="titulo">
+                                ${item.texto}
+                                <button class="copy-btn" onclick="copiarTexto('${item.texto}', this)">Copiar</button>
+                            </div>
+                        `;
+                    }
+                    if (item.tipo === 'descricao') {
+                        return `
+                            <div class="descricao">
+                                ${item.texto}
+                            </div>
+                        `;
+                    }
+                    if (item.tipo === 'texto') {
+                        return `
+                            <div class="texto">
+                                ${item.texto}
+                                <button class="copy-btn" onclick="copiarTexto('${item.texto}', this)">Copiar</button>
+                            </div>
+                        `;
+                    }
+                    return '';
+                }).join('');
+                textoDiv.innerHTML = texto;
+                textoDiv.style.display = "block";
+            }
+        });
+
+        window.onload = function() {
+            document.getElementById("loading").style.display = "flex";
+
+            let pontos = 0;
+            const loadingText = document.getElementById("loading-text");
+            const loadingInterval = setInterval(function() {
+                pontos++;
+                if (pontos > 3) {
+                    pontos = 1;
+                }
+                loadingText.textContent = "Carregando" + ".".repeat(pontos);
+            }, 500);
+
+            setTimeout(function() {
+                clearInterval(loadingInterval);
+                document.getElementById("loading").style.display = "none";
+            }, 3000);
+        };
+
+        function copiarTexto(texto, botao) {
+            const tempInput = document.createElement("input");
+            tempInput.value = texto;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            botao.textContent = "Copiado!";
+            setTimeout(() => {
+                botao.textContent = "Copiar";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
