@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Central do PIH</title>
-    <link rel="shortcut icon" href="https://www.habbo.com.br/habbo-imaging/badge/b09014s43131s50134s17013s170151e0a30a5a81c1fcb98d10054d03bc593.gif" type="image/gif">
+    <title>Programa de Incentivo à História</title>
+    <link rel="shortcut icon" href="https://www.habbo.com.br/habbo-imaging/badge/b10134s55224s36234s75015s690134e5f5e8d6628b659c59d8dd70a9a4847.gif" type="image/gif">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -15,7 +15,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;
+            justify-content: center;
             min-height: 100vh;
             margin: 0;
             padding: 10px;
@@ -24,11 +24,12 @@
 
         header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            margin-bottom: -45px;
         }
 
         header img {
-            max-width: 100px;
+            max-width: 650px; /* Reduzido para melhor adaptação */
             display: block;
             margin: 0 auto;
         }
@@ -37,6 +38,7 @@
             font-size: 24px;
             margin: 10px 0;
             text-transform: uppercase;
+            color: #fff;
             font-weight: bold;
         }
 
@@ -44,14 +46,28 @@
             width: 100%;
             max-width: 800px;
             padding: 20px;
-            margin: 0 auto;
+            margin: 20px auto;
             border-radius: 12px;
             color: #000;
             box-sizing: border-box;
         }
 
         .dropdown {
-            margin-bottom: 20px;
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centralizado */
+        }
+
+        .dropdown select {
+            font-family: 'Poppins', sans-serif;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 2px solid #000;
+            width: 80%; /* Reduzido para se ajustar melhor */
         }
 
         .dropdown select option {
@@ -63,15 +79,6 @@
         .dropdown select option:hover {
             background-color: #b87400;
             color: #fff;
-        }
-
-        .dropdown select {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: 2px solid #000;
-            width: 100%;
-            box-sizing: border-box;
         }
 
         #texto {
@@ -89,6 +96,7 @@
         }
 
         .copy-btn {
+            font-family: 'Poppins', sans-serif;
             background-color: #b87400;
             color: white;
             border: 2px solid #000;
@@ -108,6 +116,7 @@
         }
 
         .descricao {
+            font-family: 'Poppins', sans-serif;
             font-style: italic;
             font-size: 12px;
         }
@@ -130,6 +139,7 @@
             color: #fff;
             z-index: 9999;
             font-size: 24px;
+            font-family: 'Poppins', sans-serif;
             opacity: 0;
             animation: fadeIn 0.5s forwards;
         }
@@ -166,14 +176,16 @@
 
         #loading-text {
             margin-left: 15px;
-            font-size: 20px;
+            font-size: 30px;
+            display: inline-block;
             font-weight: bold;
         }
 
         #creditos {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 5px;
             font-size: 12px;
+            color: #fff;
         }
 
         #creditos p {
@@ -186,48 +198,41 @@
             text-decoration: none;
         }
 
-        /* Media Queries */
-        @media (orientation: portrait) and (max-width: 600px) {
+        /* Responsividade */
+        @media (max-width: 768px) {
             header img {
-                max-width: 70px;
+                max-width: 100%;
             }
 
-            header h1 {
-                font-size: 18px;
+            .dropdown select {
+                width: 90%; /* Ajuste para telas menores */
             }
 
             .container {
-                padding: 15px;
+                width: 100%;
+                padding: 10px;
             }
 
             #texto {
-                font-size: 12px;
+                padding: 10px;
             }
 
             .copy-btn {
-                font-size: 9px;
+                font-size: 8px;
             }
         }
 
-        @media (orientation: landscape) and (max-width: 800px) {
-            header img {
-                max-width: 60px;
-            }
-
+        @media (max-width: 480px) {
             header h1 {
-                font-size: 16px;
+                font-size: 20px;
             }
 
-            .container {
-                padding: 15px;
-            }
-
-            #texto {
-                font-size: 12px;
+            .dropdown select {
+                width: 100%; /* Preenche a largura em telas menores */
             }
 
             .copy-btn {
-                font-size: 9px;
+                font-size: 8px;
             }
         }
     </style>
@@ -240,10 +245,8 @@
         </div>
     </div>
     <header>
-        <img src="https://www.habbo.com.br/habbo-imaging/badge/b09014s43131s50134s17013s170151e0a30a5a81c1fcb98d10054d03bc593.gif" alt="Logo">
-        <h1> <i class="fas fa-landmark"></i> Programa de Incentivo à História</h1>
+        <img src="https://i.imgur.com/vL6HXI0.png" alt="Logo">
     </header>
-
     <div class="container">
         <div class="dropdown">
             <select id="seletor">
