@@ -20,24 +20,6 @@
             padding: 10px;
             overflow-x: hidden;
         }
-        ::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-dedo {
-    background: linear-gradient(to bottom, #b87400, #000);
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #000, #b87400);
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-    background: linear-gradient(to bottom, #b87400, #000);
-}
 
         header {
             text-align: center;
@@ -247,100 +229,103 @@
         text-decoration: none;
     }
 
-    @media (max-width: 600px) {
-        body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom, #b87400, black);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh;
-    box-sizing: border-box;
+    @media (orientation: portrait) and (max-width: 600px) {
+    /* Ajustes para o body */
+    body {
+        padding: 15px; /* Margens ajustadas para tela estreita */
+        justify-content: flex-start; /* Alinhamento superior */
+    }
+
+    /* Header */
+    header img {
+        max-width: 70px; /* Tamanho proporcional para telas em pé */
+    }
+
+    header h1 {
+        font-size: 18px; /* Fonte um pouco maior para melhorar a legibilidade */
+        margin: 10px 0;
+    }
+
+    /* Container principal */
+    .container {
+        max-width: 100%; /* Ocupa toda a largura disponível */
+        padding: 20px; /* Espaçamento interno maior para conforto visual */
+        margin-top: 10px;
+    }
+
+    /* Dropdown */
+    .dropdown select {
+        font-size: 14px; /* Fonte ajustada para legibilidade */
+        padding: 10px;
+    }
+
+    /* Texto dinâmico */
+    #texto {
+        font-size: 14px; /* Tamanho de fonte adequado */
+        line-height: 1.6;
+        padding: 12px;
+    }
+
+    /* Botão copiar */
+    .copy-btn {
+        font-size: 10px; /* Botão ajustado para não ocupar muito espaço */
+        padding: 4px 8px;
+    }
+
+    /* Footer */
+    #creditos {
+        font-size: 11px; /* Rodapé ligeiramente menor */
+        margin-top: 20px;
+    }
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
-    width: 100%;
-}
+@media (orientation: landscape) and (max-width: 800px) {
+    /* Ajustes para o body */
+    body {
+        padding: 10px; /* Reduzir margens laterais */
+        justify-content: flex-start; /* Ajusta o alinhamento */
+    }
 
-header img {
-    max-width: 80px;
-    display: block;
-    margin: 0 auto;
-}
+    /* Header */
+    header img {
+        max-width: 60px; /* Reduzir tamanho do logo */
+    }
 
-header h1 {
-    font-size: 18px;
-    margin: 10px 0;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+    header h1 {
+        font-size: 16px; /* Diminuir fonte */
+        margin: 8px 0;
+    }
 
-.container {
-    width: 100%;
-    max-width: 800px;
-    padding: 15px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-}
+    /* Container principal */
+    .container {
+        max-width: 90%; /* Reduzir largura máxima */
+        padding: 10px; /* Diminuir espaçamento interno */
+    }
 
+    /* Dropdown */
+    .dropdown select {
+        font-size: 12px; /* Fonte menor */
+        padding: 8px;
+    }
 
-.dropdown select {
-    width: 100%;
-    font-size: 14px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 2px solid #000;
-    box-sizing: border-box;
-}
+    /* Texto dinâmico */
+    #texto {
+        font-size: 12px; /* Reduzir tamanho da fonte */
+        line-height: 1.4; /* Ajustar espaçamento entre linhas */
+        padding: 10px;
+    }
 
+    /* Botão copiar */
+    .copy-btn {
+        font-size: 9px; /* Fonte menor para paisagem */
+        padding: 3px 6px; /* Ajustar tamanho */
+    }
 
-#texto {
-    width: 100%;
-    font-size: 14px;
-    line-height: 1.6;
-    margin-top: 10px;
-    padding: 15px;
-    background: #fff;
-    color: #333;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
-
-
-.copy-btn {
-    font-size: 10px;
-    padding: 4px 8px;
-    margin-left: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #b87400;
-    color: white;
-    border: 2px solid #000;
-}
-
-
-#creditos {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
-    color: #fff;
-}
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+    /* Footer */
+    #creditos {
+        font-size: 10px; /* Fonte menor no rodapé */
+        margin-top: 15px;
+    }
 }
     </style>
 </head>
@@ -454,3 +439,4 @@ body {
     </script>
 </body>
 </html>
+
