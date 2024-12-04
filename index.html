@@ -8,17 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow-x: hidden;
-}
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(45deg, #b87400 25%, #000 25%, #000 50%, #b87400 50%, #b87400 75%, #000 75%, #000) repeat;
-            background-size: auto;
+            background: linear-gradient(to bottom, #b87400, black);
             color: #fff;
             display: flex;
             flex-direction: column;
@@ -254,125 +246,58 @@
         text-decoration: none;
     }
 
-    @media (max-width: 1024px) and (orientation: landscape) {
+    @media (max-width: 600px) {
     body {
         font-size: 14px;
-        padding: 10px;
-        flex-direction: column;
+        padding: 15px;
+        justify-content: flex-start;
     }
 
     header h1 {
-        font-size: 22px;
-    }
-
-    .container {
-        padding: 20px;
-        width: 90%;
-        max-width: none; 
-        text-align: left;
-        margin: 0 auto;
-    }
-
-    .dropdown select {
-        font-size: 14px;
-        padding: 8px;
-        border-radius: 8px;
-        border: 2px solid #000;
-        width: 100%;
-    }
-
-    .copy-btn {
-        font-size: 12px;
-        padding: 4px 8px;
-        border-radius: 6px;
-    }
-
-    .copy-btn:focus, .copy-btn:active {
-        background-color: #8f5800;
-    }
-
-    .loading {
-        font-size: 20px;
-    }
-
-    .spinner i {
-        font-size: 45px;
-    }
-
-    #loading-text {
-        font-size: 26px;
-    }
-
-    #texto {
-        font-size: 16px;
-        padding: 20px;
-        text-align: left;
-        color: #333;
-        margin-top: 20px;
-        display: none;
-        border-radius: 8px;
-        background-color: #f8f8ff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    footer#creditos {
-        font-size: 12px;
-        margin-top: 20px;
+        font-size: 18px;
         text-align: center;
     }
 
-    footer#creditos a {
-        color: #fff;
-        text-decoration: none;
-        font-weight: bold;
+    header img {
+        max-width: 70px;
+        margin-bottom: 10px;
     }
 
-    footer#creditos p {
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;
-    }
-
-    header h1 {
-        font-size: 20px;
+    .container {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
     }
 
     .dropdown select {
         font-size: 14px;
-        padding: 12px;
+        padding: 10px;
         border-radius: 8px;
-        border: 2px solid #000;
+        border: 1px solid #000;
         width: 100%;
+    }
+
+    #texto {
+        font-size: 14px;
+        padding: 12px;
+        line-height: 1.5;
     }
 
     .copy-btn {
         font-size: 10px;
-        padding: 3px 6px;
-    }
-
-    header img {
-        max-width: 80px;
-    }
-
-    #texto {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .spinner i {
-        font-size: 40px;
+        padding: 4px 8px;
     }
 
     .loading {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     #loading-text {
-        font-size: 22px;
+        font-size: 20px;
+    }
+
+    #creditos {
+        font-size: 10px;
     }
 }
     </style>
@@ -487,4 +412,3 @@
     </script>
 </body>
 </html>
-
