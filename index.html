@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PIH Mobile</title>
+    <title>Central do PIH</title>
     <link rel="shortcut icon" href="https://www.habbo.com.br/habbo-imaging/badge/b09014s43131s50134s17013s170151e0a30a5a81c1fcb98d10054d03bc593.gif" type="image/gif">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -248,41 +248,92 @@
     }
 
     @media (max-width: 600px) {
-    body {
-        font-size: 14px;
-        padding: 15px;
-        justify-content: center; /* Centraliza o conteúdo */
-    }
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #b87400, black);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
 
-    header h1 {
-        font-size: 18px;
-    }
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
 
-    header img {
-        max-width: 70px;
-    }
+header img {
+    max-width: 80px;
+    display: block;
+    margin: 0 auto;
+}
 
-    .container {
-        padding: 15px;
-        width: 100%;
-        max-width: 100%;
-    }
+header h1 {
+    font-size: 18px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
-    .dropdown select {
-        font-size: 14px;
-        padding: 8px;
-    }
+.container {
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
 
-    #texto {
-        font-size: 14px;
-        padding: 10px;
-        margin-top: 10px;
-    }
 
-    .copy-btn {
-        font-size: 8px;
-        padding: 2px 5px;
-    }
+.dropdown select {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+}
+
+
+#texto {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+    padding: 15px;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+
+.copy-btn {
+    font-size: 10px;
+    padding: 4px 8px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #b87400;
+    color: white;
+    border: 2px solid #000;
+}
+
+
+#creditos {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #fff;
+}
 }
 
 html,
