@@ -143,30 +143,6 @@
             font-weight: bold;
             font-size: 16px;
         }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 20px;
-            }
-
-            .container h2 {
-                font-size: 16px;
-            }
-
-            .dropdown select {
-                font-size: 14px;
-            }
-
-            #texto {
-                font-size: 14px;
-            }
-
-            .copy-btn {
-                font-size: 12px;
-                padding: 6px 10px;
-            }
-        }
-
         
         body {
             margin: 0;
@@ -269,7 +245,9 @@
 
     @media (max-width: 1024px) and (orientation: landscape) {
     body {
-        padding: 20px;
+        font-size: 14px;
+        padding: 10px;
+        flex-direction: column;
     }
 
     header h1 {
@@ -277,39 +255,113 @@
     }
 
     .container {
-        width: 100%;
-        max-width: none;
-        padding: 10px;
+        padding: 20px;
+        width: 90%;
+        max-width: none; 
+        text-align: left;
+        margin: 0 auto;
     }
 
     .dropdown select {
         font-size: 14px;
-        padding: 12px;
-    }
-
-    #texto {
-        font-size: 16px;
+        padding: 8px;
+        border-radius: 8px;
+        border: 2px solid #000;
+        width: 100%;
     }
 
     .copy-btn {
-        font-size: 10px;
+        font-size: 12px;
         padding: 4px 8px;
+        border-radius: 6px;
     }
 
-    header img {
-        max-width: 120px;
+    .copy-btn:focus, .copy-btn:active {
+        background-color: #8f5800;
     }
 
     .loading {
         font-size: 20px;
     }
 
-    .spinner .fas.fa-spinner {
+    .spinner i {
         font-size: 45px;
     }
 
     #loading-text {
         font-size: 26px;
+    }
+
+    #texto {
+        font-size: 16px;
+        padding: 20px;
+        text-align: left;
+        color: #333;
+        margin-top: 20px;
+        display: none;
+        border-radius: 8px;
+        background-color: #f8f8ff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer#creditos {
+        font-size: 12px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    footer#creditos a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer#creditos p {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .dropdown select {
+        font-size: 14px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 2px solid #000;
+        width: 100%;
+    }
+
+    .copy-btn {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+
+    header img {
+        max-width: 80px;
+    }
+
+    #texto {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .spinner i {
+        font-size: 40px;
+    }
+
+    .loading {
+        font-size: 18px;
+    }
+
+    #loading-text {
+        font-size: 22px;
     }
 }
     </style>
@@ -323,7 +375,7 @@
     </div>
     <header>
         <img src="https://www.habbo.com.br/habbo-imaging/badge/b09014s43131s50134s17013s170151e0a30a5a81c1fcb98d10054d03bc593.gif" alt="Logo">
-        <h1> <i class="fas fa-chalkboard-teacher"></i> Programa de Incentivo à História</h1>
+        <h1> <i class="fas fa-landmark"></i> Programa de Incentivo à História</h1>
     </header>
 
     <div class="container">
