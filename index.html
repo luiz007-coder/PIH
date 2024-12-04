@@ -125,6 +125,12 @@
         .titulo {
             font-weight: bold;
             font-size: 16px;
+            color: #ffd700;
+            text-shadow: 
+            1px 1px 0 #555555,
+            -1px 1px 0 #555555,
+            1px -1px 0 #555555,
+            -1px -1px 0 #555555;
         }
 
         .loading {
@@ -235,6 +241,7 @@
                 font-size: 8px;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -258,19 +265,66 @@
     </div>
 
     <footer id="creditos">
-        <p>Desenvolvido por <strong>,youiz</strong></p>
-        <p>Idealizado por <strong>ofranco6830</strong> & <strong>joaobruxao</strong></p>
-        <p>&copy; Reservam-se os direitos à Polícia Militar Revolução Contra o Crime</p>
+        <p><i class="fas fa-code"></i> Desenvolvido por <strong>,youiz</strong></p>
+        <p><i class="fas fa-lightbulb"></i> Idealizado por <strong>ofranco6830</strong> & <strong>joaobruxao</strong></p>
+        <p>&copy; Reservam-se os direitos à <strong>Polícia Militar Revolução Contra o Crime</strong>.</p>
     </footer>
 
     <script>
         const scripts = {
             PIH: [
                     { tipo: 'titulo', texto: "INTRODUÇÃO"},
-                    { tipo: 'texto', texto: "Bem-vindo ao Programa de Incentivo à História!" },
-                    { tipo: 'descricao', texto: "-> testando descrição<br>" },
-                    { tipo: 'titulo', texto: "TESTE TÍTULO" },
-                    { tipo: 'descricao', texto: "um programa do garoto" }
+                    { tipo: 'texto', texto: "Olá, militar! Bem-vindo ao Programa de Incentivo à História!" },
+                    { tipo: 'texto', texto: "Nesse mês de dezembro a Polícia RCC completa 17 anos desde sua fundação." },
+                    { tipo: 'texto', texto: "Você já deve imaginar que a história que lhe foi contada" },
+                    { tipo: 'texto', texto: "é realmente um resumo de tudo que vivemos. E sim, é!" },
+                    { tipo: 'texto', texto: "No início realmente cuidávamos do crime pelo Habbo, combatendo as famosas 'máfias'." },
+                    { tipo: 'texto', texto: "Além disso, já tivemos a famosa ala médica pelos nossos Batalhões," },
+                    { tipo: 'texto', texto: "funcionavam como um corpo. Exemplo: Corpo Executivo/Militar/Médicos." },
+                    { tipo: 'texto', texto: "Enfim, somos gigantes, e você faz parte disso tudo!" },
+                    { tipo: 'texto', texto: "Alguma dúvida até aqui?!" },
+                    { tipo: 'descricao', texto: "➜ Aguarde o militar responder para prosseguir.<br>" },
+                    { tipo: 'texto', texto: "Você irá receber uma Mensagem Privada com um slide sobre a nossa história." },
+                    { tipo: 'texto', texto: "Leia com cuidado, não fique inativo e me avise quando sentir que leu o suficiente." },
+                    { tipo: 'descricao', texto: "➜ Aguarde até que o militar lhe informe que terminou." },
+                    { tipo: 'texto', texto: "Agora que já sabe sobre isso, lhe levarei para conhecer um pouco sobre nossos ex-" },
+                    { tipo: 'texto', texto: "Supremos, e como a instituição se comportou durante os seus comandos." },
+                    { tipo: 'descricao', texto: "➜ Envie o policial ao quarto 'RCC 17 Anos de História'" },
+                    { tipo: 'descricao', texto: "➜ Leia o 'Manual do Quarto' contido no tópico." },
+                    { tipo: 'texto', texto: "Muito bem! Agora que você chegou até aqui, farei duas rápidas perguntas." },
+                    { tipo: 'texto', texto: "Caso acerte, será recompensado com 15 medalhas temporárias!" },
+                    { tipo: 'texto', texto: "Não se preocupe em casos de erros, nenhuma punição será aplicada." },
+                    { tipo: 'titulo', texto: "TESTE TEÓRICO" },
+                    { tipo: 'descricao', texto: "➜ Atenção! As perguntas são dividas por blocos. Escolha duas dentre todas, não é necessário mais que isso." },
+                    { tipo: 'descricao', texto: "➜ Atenção! As respostas corretas devem ser ditas ao policiais em caso de erros." },
+                    { tipo: 'descricao', texto: '<span style="color: #FFFF00; text-shadow: 1px 1px 0 #555555, -1px 1px 0 #555555, 1px -1px 0 #555555, -1px -1px 0 #555555;">Bloco 01</span>' },
+                    { tipo: 'texto', texto: "01. Quais foram os amigos que ajudaram Holx a reerguer a RCC em 2008?" },
+                    { tipo: 'descricao', texto: "R. dezafk1 e GGA951. e outros." },
+                    { tipo: 'texto', texto: "02. Quem foi a primeira e única mulher a ser Suprema da RCC?" },
+                    { tipo: 'descricao', texto: "R. dezafk1" },
+                    { tipo: 'descricao', texto: '<span style="color: #FFFF00; text-shadow: 1px 1px 0 #555555, -1px 1px 0 #555555, 1px -1px 0 #555555, -1px -1px 0 #555555;">Bloco 02</span>' },
+                    { tipo: 'texto', texto: "01. Em qual ano rodrigoeuka assumiu a Supremacia da RCC?" },
+                    { tipo: 'descricao', texto: "R. 2011 ou 2012. (Ambas estão corretas)" },
+                    { tipo: 'texto', texto: "02. Por qual motivo jrafaels e Thi005 travaram uma guerra com nabas704?" },
+                    { tipo: 'descricao', texto: "R. Por ele retornar meses após seu afastamento e exigir lucros da Polícia." },
+                    { tipo: 'descricao', texto: '<span style="color: #FFFF00; text-shadow: 1px 1px 0 #555555, -1px 1px 0 #555555, 1px -1px 0 #555555, -1px -1px 0 #555555;">Bloco 03</span>' },
+                    { tipo: 'texto', texto: "01. Em quais anos tivemos a primeira e grande reforma administrativa?" },
+                    { tipo: 'descricao', texto: "R. 2013, 2014 e 2015." },
+                    { tipo: 'texto', texto: "02. Por qual motivo -666segurasa666 desistiu da guerra contra nabas704 em 2015?" },
+                    { tipo: 'descricao', texto: "R. Para ajudar a polícia RCC a se reerguer." },
+                    { tipo: 'descricao', texto: '<span style="color: #FFFF00; text-shadow: 1px 1px 0 #555555, -1px 1px 0 #555555, 1px -1px 0 #555555, -1px -1px 0 #555555;">Bloco 04</span>' },
+                    { tipo: 'texto', texto: "01. Em qual ano tivemos o primeiro Supremo eleito democraticamente no atual modelo?" },
+                    { tipo: 'descricao', texto: "R. 2017" },
+                    { tipo: 'texto', texto: "02. Qual foi a mais importante inovação tecnológica adotada pela RCC nos últimos anos?" },
+                    { tipo: 'descricao', texto: "R. RCCSystem" },
+                    { tipo: 'titulo', texto: "FINALIZAÇÃO" },
+                    { tipo: 'texto', texto: "Muito bem, militar!" },
+                    { tipo: 'texto', texto: "Podemos retornar para o Batalhão, parabéns pela conclusão do PIH!" },
+                    { tipo: 'texto', texto: "Esperamos que possa se aventurar nas histórias da polícia, assim como vir aqui" },
+                    { tipo: 'texto', texto: "sempre que desejar!" },
+                    { tipo: 'descricao', texto: "➜ Retorne com o policial para o Batalhão." },
+                    { tipo: 'descricao', texto: '➜ Poste +15 medalhas temporárias ao aprovado, clicando <span style="color: #009dcf;"><a href="https://system.policercc.com.br/requerimentos/gratificacoes_efetivas">aqui</a></span>.' },
+                    { tipo: 'descricao', texto: "➜ Volte ao fórum para postar sua aplicação no tópico." },
                 ]
         };
 
@@ -345,3 +399,4 @@
     </script>
 </body>
 </html>
+
